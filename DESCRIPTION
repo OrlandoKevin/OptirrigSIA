@@ -2,14 +2,16 @@ Package: OptirrigSIA
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+  person("ORLANDO", "Kevin", , "kevinbosirany@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+  license
 Depends: 
-    fairify
+  fairify,
+  optirrigCORE
 Remotes: 
-    git::https://forgemia.inra.fr/umr-g-eau/fairify.git
+  git::https://forgemia.inra.fr/umr-g-eau/fairify.git,
+  git::https://read_only:5gwttJLmxdgsbCK7UAEE@forgemia.inra.fr/optirrighive/optirrigCORE.git@devlp
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
