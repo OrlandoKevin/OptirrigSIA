@@ -1,0 +1,6 @@
+default:
+  data:
+    mode: remote
+    local: "path_for_data_on_your_disk"
+    remote: "https://public_link_on_your_cloud"
+    write_results: false

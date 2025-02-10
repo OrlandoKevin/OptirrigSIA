@@ -1,0 +1,42 @@
+stages:
+  - checks
+  - deploy
+
+default:
+  tags: [docker]
+
+image: rocker/geospatial:latest
+
+variables:
+  CACHE_CI: "$CI_PROJECT_DIR/ci"
+  R_LIBS_USER: "$CACHE_CI/lib"
+
+cache:
+  paths:
+    - $CACHE_CI
+
+before_script:
+  - mkdir -p $R_LIBS_USER
+  - echo "R_LIBS='$R_LIBS_USER'" > .Renviron
+  - R -q -e 'if (!require(remotes)) install.packages("remotes")'
+  - R -q -e 'remotes::install_deps(dependencies = TRUE)'
+
+check:
+  variables:
+    NOT_CRAN: "true"
+  stage: checks
+  allow_failure: true
+  script:
+    - R -q -e 'remotes::update_packages("rcmdcheck")'
+    - R -q -e 'rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")'
+
+pages:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  script:
+    - R -q -e 'devtools::install(dependencies = TRUE)'
+    - R -q -e 'fairify::build_site()'
+  artifacts:
+    paths:
+      - public
