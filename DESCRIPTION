@@ -2,11 +2,12 @@ Package: OptirrigSIA
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-  person("ORLANDO", "Kevin", , "kevinbosirany@gmail.com", role = c("aut", "cre"))
+  person("Kevin Bosirany", "ORLANDO", , "kevinbosirany@gmail.com",
+  role = c("aut", "cre"), comment = c(ORCID = "0009-0009-2784-3108"))
 Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-  license
+License: GPL-3
 Depends: 
+  R (>= 3.5.0),
   fairify,
   optirrigCORE
 Remotes: 
@@ -15,3 +16,6 @@ Remotes:
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Suggests: 
+  testthat (>= 3.0.0)
+Config/testthat/edition: 3
