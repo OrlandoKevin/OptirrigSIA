@@ -36,7 +36,7 @@ pages:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
   script:
     - R -q -e 'devtools::install(dependencies = TRUE)'
-    - R -q -e 'fairify::build_site()'
+    - R -q -e 'fairify::build_site(clean_cache = TRUE, allow_duplicate_labels = TRUE)'
   artifacts:
     paths:
       - public
