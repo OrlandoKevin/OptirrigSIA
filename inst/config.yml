@@ -1,6 +1,6 @@
 default:
   data:
-    mode: remote
-    local: "path_for_data_on_your_disk"
-    remote: "https://nextcloud.inrae.fr/s/yYBmQkeq4oCM4Rc"
+    mode: local
+    local: "/home/korlando/OneDrive/Emplois/Emplois/INRAE/Dossier_de_travail/SIA_2025/Data/2021_mais_SIA"
+    remote: "https://1drv.ms/f/s!ApQvusMTuFuclvwYTbahSx1z5YWRgw?e=xlASWd"
     write_results: false
