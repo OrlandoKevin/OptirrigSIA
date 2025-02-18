@@ -1,0 +1,5 @@
+default:
+  data:
+    mode: local
+    local: "/home/korlando/Nextcloud/PRJ_Optirrig/SIA2025/data"
+    write_results: false

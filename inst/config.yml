@@ -1,6 +1,6 @@
 default:
   data:
-    mode: local
-    local: "/home/korlando/OneDrive/Emplois/Emplois/INRAE/Dossier_de_travail/SIA_2025/Data/2021_mais_SIA"
+    mode: remote
+    local: "write_here/your_local_path"
     remote: "https://1drv.ms/f/s!ApQvusMTuFuclvwYTbahSx1z5YWRgw?e=xlASWd"
     write_results: false

@@ -6,13 +6,16 @@ Authors@R:
   role = c("aut", "cre"), comment = c(ORCID = "0009-0009-2784-3108"))
 Description: What the package does (one paragraph).
 License: GPL-3
+Imports:
+  optirrigCORE,
+  TalanoaHydro
 Depends: 
   R (>= 3.5.0),
-  fairify,
-  optirrigCORE
+  fairify
 Remotes: 
   git::https://forgemia.inra.fr/umr-g-eau/fairify.git,
-  git::https://read_only:5gwttJLmxdgsbCK7UAEE@forgemia.inra.fr/optirrighive/optirrigCORE.git@devlp
+  git::https://read_only:5gwttJLmxdgsbCK7UAEE@forgemia.inra.fr/optirrighive/optirrigCORE.git@95-sia-produce-datasets-for-eneo,
+  git::https://talanoa_repo_r:ytTscJGmcnxsMXFbCbpz@forgemia.inra.fr/talanoa/talanoa_hydro.git
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

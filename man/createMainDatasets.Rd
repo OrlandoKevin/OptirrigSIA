@@ -2,10 +2,25 @@
 % Please edit documentation in R/createMainDatasets.R
 \name{createMainDatasets}
 \alias{createMainDatasets}
-\title{Create main datasets for ENEO}
+\title{Create main datasets}
 \usage{
-createMainDatasets(cfg = loadConfig())
+createMainDatasets(
+  version = "v02",
+  do_PSE_dim = FALSE,
+  write_results = cfg$data$write_results,
+  cfg = loadConfig()
+)
+}
+\arguments{
+\item{version}{\link{character} Version of the dataset}
+
+\item{write_results}{\link{logical} If \code{TRUE} writes the results in the data folder. See returned value of \code{loadConfig}.}
+
+\item{cfg}{a config object. Configuration to use. See \link{loadConfig} for details}
+}
+\value{
+\link{data.frame} Main datasets
 }
 \description{
-Create main datasets for ENEO
+Create main datasets
 }
