@@ -11,12 +11,14 @@
 #' @export
 #'
 calcFinYield <- function(
-  om, f1 = 100, f2 = 0.25 + 0.35, f3 = 170, cfg = loadConfig()
+  om, f1 = 100, f2 = 0.15, f3 = 170, cfg = loadConfig()
 ) {
   om <- om %>%
     mutate(
-      F_SIA = f3 * (.data$HI * .data$TDM * (100 + 30) / 100) - f2 * 10 * .data$IrrCum -
-        f1
+      # Rendement = .data$HI * .data$TDM * (100 + 30) / 100,
+      Rendement  = .data$yHuGs,
+      F_SIA = f3 * (.data$Rendement) - f2 * 10 * .data$IrrCum - f1,
+      Rendement_final = max(.data$Rendement)
     )
   return(om)
 }

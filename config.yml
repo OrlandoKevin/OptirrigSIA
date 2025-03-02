@@ -1,5 +1,5 @@
 default:
   data:
     mode: local
-    local: "/home/korlando/Nextcloud/PRJ_Optirrig/SIA2025/data"
+    local: "/home/korlando/Jobs/SIA2025/Data"
     write_results: false

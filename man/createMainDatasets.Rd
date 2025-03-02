@@ -7,6 +7,7 @@
 createMainDatasets(
   version = "v02",
   do_PSE_dim = FALSE,
+  force = FALSE,
   write_results = cfg$data$write_results,
   cfg = loadConfig()
 )

@@ -43,13 +43,11 @@ getClimateHorizonProjections <- function(
       ## Reconstruct the scenario name
       scenario_proj <- paste(scenario_proj, collapse = "_")
       # Get the climate horizon projections
-      outputsModel$SIA1[[
+      outputsModel[[
         sprintf(
           "run_%i", datasets$scenarios_simulated[datasets$scenario == scenario_proj & datasets$step == step]
         )
       ]] %>%
-        mutate_at("dates", as.Date) %>%
-        calcFinYield(om = .) %>%
         merge(
           .,
           datasets %>%

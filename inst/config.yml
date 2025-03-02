@@ -1,6 +1,6 @@
 default:
   data:
-    mode: remote
-    local: "write_here/your_local_path"
+    mode: local
+    local: "/home/korlando/Jobs/SIA2025/Data"
     remote: "https://1drv.ms/f/s!ApQvusMTuFuclvwYTbahSx1z5YWRgw?e=xlASWd"
     write_results: false

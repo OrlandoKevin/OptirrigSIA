@@ -4,7 +4,7 @@
 \alias{calcFinYield}
 \title{Calc financial yield}
 \usage{
-calcFinYield(om, f1 = 1000, f2 = 0.25 + 0.35, f3 = 170, cfg = loadConfig())
+calcFinYield(om, f1 = 100, f2 = 0.15, f3 = 170, cfg = loadConfig())
 }
 \arguments{
 \item{om}{outputsModel}

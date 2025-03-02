@@ -4,7 +4,15 @@
 \alias{savePlots}
 \title{Save plots}
 \usage{
-savePlots(scenarios_final, i, outputsModel, version, cfg = loadConfig())
+savePlots(
+  scenarios_final,
+  i,
+  outputsModel,
+  fun_prod,
+  version,
+  force = FALSE,
+  cfg = loadConfig()
+)
 }
 \arguments{
 \item{scenarios_final}{\link{data.frame} Scenarios}
